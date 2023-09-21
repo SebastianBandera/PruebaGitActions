@@ -36,10 +36,12 @@ jobs:
       - name: Install Dependencies
         if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: |
-          npm ci Frontend/angular1
+          cd Frontend/angular1
+          npm ci
       - name: Build
         run: |
-          npm run build Frontend/angular1 -- --prod
+          cd Frontend/angular1
+          npm run build -- --prod
       - name: Lint
         run: |
           npm run lint
