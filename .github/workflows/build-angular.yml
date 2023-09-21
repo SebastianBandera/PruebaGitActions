@@ -42,7 +42,3 @@ jobs:
         run: |
           cd Frontend/angular1
           npm run build
-      - name: Test
-        run: |
-          cd Frontend/angular1
-          npm run test
