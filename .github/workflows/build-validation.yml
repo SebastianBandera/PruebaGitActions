@@ -28,7 +28,7 @@ jobs:
         dotnet-version: ${{ env.DOTNET_VERSION }}
 
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore Backend/WebApplication1
       
     - name: Build
       run: dotnet build Backend/WebApplication1 --configuration Release --no-restore
